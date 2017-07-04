@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 
 DIR=~/.dotfiles
 SYS_DIR=${DIR}/system
