@@ -1,7 +1,7 @@
 # dotfiles
 Configuration files for various programs
 
-##To install:
+## to install:
 * checkout master to your home directory
 * run `.dotfiles/dots.sh`
 
