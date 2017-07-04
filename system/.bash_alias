@@ -9,3 +9,5 @@ alias la='ls -alhF --color=auto'
 alias ls='ls -F --color=auto'
 
 alias grep='grep --color=auto'
+
+alias mkdir='mkdir -p'
