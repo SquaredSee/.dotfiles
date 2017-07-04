@@ -30,4 +30,3 @@ for DOTFILE in $(find ${ATOM_DIR}); do
 done
 # install atom packages
 # ~/.atom/package_install.sh
-# HELLO I AM A CHANGE
