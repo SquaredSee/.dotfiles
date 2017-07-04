@@ -1,7 +1,9 @@
 # dotfiles
 Configuration files for various programs
 
-To install, run `.dotfiles/dots.sh`
+##To install:
+* checkout master to your home directory
+* run `.dotfiles/dots.sh`
 
 inspiration from:
 http://dotfiles.github.io/
