@@ -5,7 +5,8 @@ if [ -f /etc/bash.bashrc ]; then
 fi
 
 # overwrite /etc/bashrc PS1 prompt
-export PS1="\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[m\] \[\e[31m\]\`__git_ps1\`\[\e[m\]\n\$ "
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1="\n\[\e[32m\]\u@\h:\[\e[m\] \[\e[33m\]\w\[\e[m\] \[\e[31m\]\`__git_ps1\`\[\e[m\]\n\$ "
 
 # required because cmder starts in ~/cmder
 cd ~
