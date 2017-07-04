@@ -1,0 +1,48 @@
+"*":
+  core:
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "linter-flake8"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontSize: 15
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "c398cfb7-19cd-47a6-85b8-0bf43cddfbc1"
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+  linter:
+    lintOnChange: false
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    lintHtmlFiles: true
+  "linter-flake8":
+    ignoreErrorCodes: [
+      "E128"
+      "E501"
+    ]
+    pycodestyleErrorsToWarnings: true
+  "linter-ui-default":
+    panelHeight: 69
+    showPanel: true
+  minimap:
+    disablePythonDocLinks: true
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "minimap-selection": {}
+  welcome:
+    showOnStartup: false
