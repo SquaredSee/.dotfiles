@@ -28,4 +28,4 @@ for DOTFILE in $(find ${ATOM_DIR}); do
     fi
 done
 
-~/.atom/package_install.sh
+# ~/.atom/package_install.sh
