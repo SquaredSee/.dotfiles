@@ -7,6 +7,7 @@ Configuration files for various programs
 
 
 inspiration from:
+
 http://dotfiles.github.io/
 
 https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
