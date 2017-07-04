@@ -12,13 +12,14 @@ fi
 
 echo "Creating symlinks..."
 
-
+# symlink root dir files
 for DOTFILE in $(find ${SYS_DIR}); do
     if [ -f ${DOTFILE} ]; then
         ln -sfv ${DOTFILE} ~
     fi
 done
 
+#symlink .atom files
 if [ ! -d ~/.atom ]; then
     mkdir ~/.atom
 fi
@@ -27,5 +28,5 @@ for DOTFILE in $(find ${ATOM_DIR}); do
         ln -sfv ${DOTFILE} ~/.atom
     fi
 done
-
+# install atom packages
 # ~/.atom/package_install.sh
