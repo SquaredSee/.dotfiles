@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 DIR=~/.dotfiles
 SYS_DIR=${DIR}/system
 ATOM_DIR=${DIR}/atom
