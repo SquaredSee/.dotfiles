@@ -1,19 +1,36 @@
 #!/usr/bin/env bash
 
-DIR=~/.dotfiles
-SYS_DIR=${DIR}/system
-ATOM_DIR=${DIR}/atom
+gflag=''
+while getopts ":g" opt; do
+    case $opt in
+        g)
+            # pulls new data from github before anything else
+            gflag=true
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+    esac
+done
 
-# if DIR is a repo and if git is installed
-if [ -d "${DIR}/.git" ] && [ $(command -v git 2>/dev/null) ]; then
-    echo "Pulling new data from github..."
-    git --work-tree="${DIR}" --git-dir="${DIR}/.git" pull origin master
+# directory variables
+dir=~/.dotfiles
+sys_dir=${dir}/system
+atom_dir=${dir}/atom
+
+if [ "$gflag" = true ]; then
+    # if dir is a repo and if git is installed
+    if [ -d "${dir}/.git" ] && [ $(command -v git 2>/dev/null) ]; then
+        echo "Pulling new data from github..."
+        git --work-tree="${dir}" --git-dir="${dir}/.git" pull origin master
+    fi
 fi
+
 
 echo "Creating symlinks..."
 
 # symlink root dir files
-for DOTFILE in $(find ${SYS_DIR}); do
+for DOTFILE in $(find ${sys_dir}); do
     if [ -f ${DOTFILE} ]; then
         ln -sfv ${DOTFILE} ~
     fi
@@ -23,7 +40,7 @@ done
 if [ ! -d ~/.atom ]; then
     mkdir ~/.atom
 fi
-for DOTFILE in $(find ${ATOM_DIR}); do
+for DOTFILE in $(find ${atom_dir}); do
     if [ -f ${DOTFILE} ]; then
         ln -sfv ${DOTFILE} ~/.atom
     fi
