@@ -6,6 +6,7 @@ while getopts ":g" opt; do
         g)
             # pulls new data from github before anything else
             gflag=true
+            ;;
         \?)
             echo "Invalid option: -$OPTARG" >&2
             exit 1
