@@ -24,6 +24,8 @@ if [ "$gflag" = true ]; then
     if [ -d "${dir}/.git" ] && [ $(command -v git 2>/dev/null) ]; then
         echo "Pulling new data from github..."
         git --work-tree="${dir}" --git-dir="${dir}/.git" pull origin master
+    else
+        echo "ERR: Unable to pull data from github" >&2
     fi
 fi
 
@@ -46,5 +48,6 @@ for DOTFILE in $(find ${atom_dir}); do
         ln -sfv ${DOTFILE} ~/.atom
     fi
 done
+
 # install atom packages
 # ~/.atom/package_install.sh
