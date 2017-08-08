@@ -1,3 +1,6 @@
+# .bash_function is sourced by .bashrc, contains useful shell functions
+
+# mkdir and cd in one command
 mkcd() {
     mkdir -p "$1"
     cd "$1"
