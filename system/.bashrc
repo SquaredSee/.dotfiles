@@ -1,5 +1,6 @@
-# read /etc/bashrc if present
-# bash.bashrc for git-for-windows
+# .bashrc is the individual per-interactive-shell startup file
+
+# read /etc/bash.bashrc if present
 if [ -f /etc/bash.bashrc ]; then
     source /etc/bash.bashrc
 fi
