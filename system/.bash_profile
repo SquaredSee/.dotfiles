@@ -1,7 +1,4 @@
-# read ~/.profile if present
-if [ -f ~/.profile ]; then
-    source ~/.profile
-fi
+# .bash_profile is the personal initialization file, executed for login shells
 
 # read ~/.bashrc if present
 if [ -f ~/.bashrc ]; then
