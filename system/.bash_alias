@@ -1,3 +1,5 @@
+# .bash_alias is sourced by .bashrc, contains command aliases
+
 # Make some possibly destructive commands more interactive.
 alias rm='rm -i'
 alias mv='mv -i'
